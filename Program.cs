@@ -62,7 +62,7 @@ namespace Lab0Basics
         public void findPrime()
         {   
             List<double> prime = new List<double>();
-            bool isPrime = true;
+            bool isPrime;
             for (double i = high-1;  i > low; i--)
             {
                 isPrime = true;
