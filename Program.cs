@@ -25,13 +25,13 @@ namespace Lab0Basics
             set { high = value; }
         }
         //Method that calculates the difference between high and low
-        public void difference()
+        public void Difference()
         {
             dif = high-low;
             Console.WriteLine("The difference between {0} and {1} is {2}", high, low, dif);
         }
         //Method that adds all numbers between the high and low to a list
-        public void betweenList()
+        public void BetweenList()
         {
             for (double i = high-1; i > low; i--)
             {
@@ -39,7 +39,7 @@ namespace Lab0Basics
             }
         }
         //Method that takes all data from the list and adds it to a file
-        public void writeListToFile()
+        public void WriteListToFile()
         {
             List<string> stringNum = new List<string>();
             foreach (double i in betweenNums)
@@ -49,7 +49,7 @@ namespace Lab0Basics
             File.WriteAllLines("numbers.txt", stringNum);
         }
         //Method that reads data from a file and finds the sum of all numbers from the file
-        public void readFromFile()
+        public void ReadFromFile()
         {
             List<string> readFile = new List<string>(File.ReadAllLines("numbers.txt"));
             foreach (string line in readFile)
@@ -59,7 +59,7 @@ namespace Lab0Basics
             Console.WriteLine("The sum of all numbers between {0} and {1} is {2}", high, low, sumAll);
         }
         //Method that finds every prime number and prints a every prime number between low and high
-        public void findPrime()
+        public void FindPrime()
         {   
             List<double> prime = new List<double>();
             bool isPrime;
@@ -110,11 +110,11 @@ namespace Lab0Basics
             user.Low = userLow;
 
             //Methods called from HighLow
-            user.difference();
-            user.betweenList();
-            user.writeListToFile();
-            user.readFromFile();
-            user.findPrime();
+            user.Difference();
+            user.BetweenList();
+            user.WriteListToFile();
+            user.ReadFromFile();
+            user.FindPrime();
         }
     }
 }
