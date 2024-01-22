@@ -33,7 +33,7 @@ namespace Lab0Basics
         //Method that adds all numbers between the high and low to a list
         public void BetweenList()
         {
-            for (double i = high-1; i > low; i--)
+            for (double i = high; i >= low; i--)
             {
                 betweenNums.Add(i);
             }
@@ -63,12 +63,12 @@ namespace Lab0Basics
         {   
             List<double> prime = new List<double>();
             bool isPrime;
-            for (double i = high-1;  i > low; i--)
+            for (double i = high;  i >= low; i--)
             {
                 isPrime = true;
                 for(double j = 2; j<= i; j++)
                 {
-                    if (i%j == 0 && (i !=j)) { isPrime = false; }
+                    if (i%j == 0 && (i !=j)) { isPrime = false; break; }
                 }
                 if (isPrime)
                 {
